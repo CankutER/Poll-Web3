@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poll</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- <script
+      type="text/javascript"
+      src="./node_modules/@truffle/contract/dist/truffle-contract.min.js"
+    ></script>
+    <script src="./node_modules/web3/dist/web3.min.js"></script> -->
+  </head>
+  <body>
+    <section class="main">
+      <div class="buttons">
+        <button type="button" class="btn pause-btn">
+          pause the poll : admin only
+        </button>
+        <button type="button" class="btn connect-btn">
+          connect your wallet
+        </button>
+      </div>
+      <div class="center">
+        <h4 class="status"></h4>
+        <header class="header">
+          <h1>
+            Which potential candidate do you think has the biggest chance to win
+            the next elections in Turkey?
+          </h1>
+        </header>
+        <article class="candidates">
+          <div class="candidate">
+            <h3>Mansur Yavas</h3>
+
+            <p class="percentage"></p>
+          </div>
+          <div class="candidate">
+            <h3>Recep Tayyip Erdogan</h3>
+
+            <p class="percentage"></p>
+          </div>
+          <div class="candidate">
+            <h3>Kemal Kilicdaroglu</h3>
+
+            <p class="percentage"></p>
+          </div>
+          <div class="candidate">
+            <h3>Umit Ozdag</h3>
+
+            <p class="percentage"></p>
+          </div>
+          <div class="candidate">
+            <h3>Ekrem Imamoglu</h3>
+
+            <p class="percentage"></p>
+          </div>
+        </article>
+        <button type="submit" class="btn vote-btn">Vote!</button>
+      </div>
+    </section>
+
+    <script src="./bundle.js"></script>
+  </body>
+</html>

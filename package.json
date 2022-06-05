@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@truffle/contract": "^4.5.11"
+  },
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "watchify": "^4.0.0"
+  }
+}

@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #dee2e6;
+}
+p {
+  font-size: 1.5rem;
+}
+.main {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  place-items: center;
+  flex-grow: 1;
+  margin: 0 auto;
+  text-align: center;
+  min-height: 100vh;
+  min-width: 85vw;
+  max-width: 1170px;
+  color: #495057;
+}
+
+.center {
+  width: 100%;
+}
+.status {
+  min-height: 1.5rem;
+  color: #bca136;
+  margin: 2rem auto;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+.header {
+  font-size: 1.25rem;
+  margin-bottom: 3rem;
+}
+.candidates {
+  margin: 0 auto;
+  display: grid;
+  gap: 0.5rem;
+  width: 30%;
+  min-width: 360px;
+  place-items: center;
+}
+.candidate {
+  position: relative;
+  display: flex;
+
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 100%;
+  max-width: 600px;
+  min-height: 3rem;
+  font-size: 1.25rem;
+  background-color: #adb5bd;
+  color: #343a40;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+  padding: 0 0.5rem;
+}
+.candidate h3 {
+  text-align: left;
+}
+.candidate p,
+.candidate h3 {
+  z-index: 1;
+}
+.candidate::after {
+  position: absolute;
+  content: "";
+  background-color: #ced4da;
+  top: 0;
+  left: 0;
+  width: var(--width, 0%);
+  height: 100%;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+}
+.candidate:hover {
+  cursor: pointer;
+  background-color: #343a40;
+  color: #ced4da;
+}
+.candidate:hover::after {
+  background-color: #6c757d;
+  color: #ced4da;
+}
+
+.btn {
+  display: block;
+  margin: 0 auto;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  width: 8rem;
+  height: 3rem;
+  border: 0.2rem solid #343a40;
+  border-radius: 5rem;
+  transition: all 0.3s;
+  background-color: transparent;
+}
+.btn:hover {
+  background-color: #6c757d;
+  color: #ced4da;
+}
+
+.candidate.selected {
+  background-color: #343a40;
+  color: #ced4da;
+}
+.candidate.selected::after {
+  background-color: #6c757d;
+  color: #ced4da;
+}
+.buttons {
+  display: flex;
+  gap: 3rem;
+}
+.connect-btn,
+.pause-btn {
+  width: auto;
+  height: auto;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  margin-top: 3rem;
+}
+.mousedown {
+  transform: scale(0.95);
+}
+
+@media screen and (max-width: 600px) {
+  .candidate,
+  .header,
+  .status {
+    font-size: 0.875rem;
+  }
+  .connect-btn,
+  .pause-btn {
+    font-size: 1.1rem;
+  }
+  .status {
+    margin: 1rem auto;
+  }
+}
